@@ -9,6 +9,10 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const workoutRoutes = require('./routes/workouts');
 
+// express app
+const app = express();
+
+// Allow requests from any origin (not recommended for production)
 app.use(cors({ origin: '*' }));
 
 // middleware
