@@ -12,12 +12,11 @@ const workoutRoutes = require('./routes/workouts');
 // express app
 const app = express();
 
-app.use(cors());
-
-var corsOptions = {
-    origin: 'https://mern-app-xe3p.onrender.com/',
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-  }
+// Allow requests from the Netlify deployment
+const corsOptions = {
+    origin: 'https://658ef62f6ca12dcc2596bb4c--dainty-bubblegum-7b59c0.netlify.app',
+    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
   
   // Enable CORS with the specified options
   app.use(cors(corsOptions));
