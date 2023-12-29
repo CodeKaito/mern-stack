@@ -9,9 +9,6 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const workoutRoutes = require('./routes/workouts');
 
-// express app
-const app = express();
-
 app.use(cors());
 
 var corsOptions = {
