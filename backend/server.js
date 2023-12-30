@@ -33,9 +33,9 @@ app.use('/api/workouts', workoutRoutes);
 mongoose.connect(mongo_uri)
     .then(() => {
         // listen for requests
-        app.listen(site, () => {
+        app.listen(port, () => {
         console.log('Connected to mongodb');
-        console.log(`Listening on ${site}`);
+        console.log(`Listening on ${port}`);
         });
     })
     .catch((err) => console.log(err));
